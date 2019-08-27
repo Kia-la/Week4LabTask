@@ -1,0 +1,69 @@
+<html>
+<style>
+    table {
+        width: 100%;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 15px;
+        text-align: left;
+    }
+
+    table#t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    table#t01 tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    table#t01 th {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+
+<body style="background-color:powderblue">
+    <table id="t01">
+        <tr>
+            <th>
+                Task Name
+            </th>
+            <th>
+                Task Due
+            </th>
+            <th>
+                Task Description
+            </th>
+        </tr>
+        <% for(let i=0;i<data.length;i++){ %>
+        <tr>
+            <td>
+                <%= data[i].taskname %>
+            </td>
+            <td>
+                <%= data[i].taskdue %>
+            </td>
+            <td>
+                <%= data[i].taskdesc %>
+            </td>
+        </tr>
+        <%} %>
+    </table>
+
+    </br>
+
+         <p><a href="/"><font size="6">Home</font></a></p>
+          <p><a href="/addnewtask"><font size="6">Add New Customer</font></a></p>
+</body>
+
+</html>
